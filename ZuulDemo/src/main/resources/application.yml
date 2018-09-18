@@ -1,0 +1,24 @@
+zuul:
+  prefix: /api
+  routes:
+    ProductManagement-service:
+      path: /pms/**
+      serviceId: ProductManagement-service
+    VendorManagement-service:
+      path: /vms/**
+      serviceId: VendorManagement-service
+    SupplyManagement-service:
+      path: /sms/**
+      serviceId: SupplyManagement-service
+
+eureka:
+  client:
+    service-url:
+        defaultZone: http://127.0.0.1:8761/eureka/
+    
+server:
+     port: 7010
+      
+spring:
+  application:
+    name: zuul-service  
